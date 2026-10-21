@@ -1,5 +1,5 @@
 /* remove thic comment to add @import font or CSS variables at the top of this file */
-@import url('https://googlesapi.com');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -46,7 +46,7 @@ header, footer {
 /* WRITE YOUR styling/typesetting CSS code BELOW HERE */
 /* General Text Styling*/
 html {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Merriweather', serif;
     font-size: 10px;
 }
 
@@ -55,30 +55,98 @@ header {
     font-size: 1.6rem;
 }
 h1{
-    display:grid;
-    place-content: center;
+    text-align: center;
+    font-size: 4rem;
 }
-section + p{
+h2 {
+    font-size: 2.4rem;
+}
+h1,h2 {
+    font-family: 'Montserrat', arial;
+    letter-spacing: 1px;
+}
+
+body{
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+p {
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+}
+section h2+ p{
    text-indent: 1.25rem;
 }
 /*Links*/
 
-a {
+a:link{
+    color: #a66;
     text-decoration: underline;
 }
 
 a:visited{
-
+    color: purple;
 }
 
 a:focus, a:hover{
     text-decoration: none;
     color: #a66;
 }
-
+a:focus {
+    outline:none;
+    text-decoration: none;
+    color:white;
+    background-color: #a66;
+}
+a[href^='http'] {
+    background-image: url('external-link-52.png');
+    background-position: right center;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    padding-right: 15px;
+}
 
 /* Lists */
+p {
+    margin: 1.6rem 0;
+}
 
-nav {
-display: flex;
+section ul,
+aside ul{
+    list-style: square;
+}
+
+section li::marker,
+aside li::marker {
+    color: #a66;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1.5rem;
+    border: 2px solid gray;
+    text-align:center;
+    text-decoration: none;
+}
+
+nav li {
+    margin-bottom: 1.5rem;
+}
+
+
+nav a:hover,
+nav a:focus {
+    background-color: #a66;
+    color: white;
+}
+nav a:link,
+nav a:visited {
+    color: #a66;
 }
